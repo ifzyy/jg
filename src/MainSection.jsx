@@ -1,29 +1,39 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import aboutImage from "./assets/about.png";
 import ServicesGrid from "./ServiceGrid";
 import TiltedLogoBar from "./TitledLogoBar";
 import TestimonialCarousel from "./TestimonialCarousel";
 import ResourcesGrid from "./ResourcesGrid";
 export default function MainSection() {
- 
-
   return (
     <div>
-      <section id="about" className=" md:mb-[200px]  2xl:mt-[250px] text-white  flex items-center justify-center p-[50px] ">
+      <section
+        id="about"
+        className=" md:mb-[200px]  2xl:mt-[250px] text-white  flex items-center justify-center p-[50px] "
+      >
         <div className="max-w-7xl w-full">
-          <div className="flex flex-col md:flex-row gap-8"> 
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
-              <div className="relative">
-                <img
-                  src={aboutImage}
-                  alt="Workspace with laptop and plant"
-                  className=""
-                />
-                <div className="absolute border-2 border-white rounded-lg transform translate-x-4 translate-y-4 -z-10 p-2"></div>
+              <div className="">
+                <div className="relative max-w-2xl w-full">
+                  {/* White border effect */}
+                  <div className="absolute inset-0 bg-white rounded-3xl transform translate-x-2 translate-y-2"></div>
+
+                  {/* Image container */}
+                  <div className="relative rounded-3xl overflow-hidden">
+                    <img
+                      src={aboutImage}
+                      alt="Workspace with laptop, hands typing, plant, and notepad"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="md:w-1/2"  >
-            <h2  className="text-4xl font-bold text-yellow-400 mb-8">About Me</h2>
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-yellow-400 mb-8">
+                About Me
+              </h2>
               <h3 className="text-3xl font-bold mb-4">I AM JOSEPH GBADAMOSI</h3>
               <p className="text-lg mb-4">The one you heard about.</p>
               <p className="mb-4">
@@ -39,11 +49,10 @@ export default function MainSection() {
           </div>
         </div>
       </section>
-      <ServicesGrid/>
+      <ServicesGrid />
       <TiltedLogoBar />
       <TestimonialCarousel />
       <ResourcesGrid />
- 
     </div>
   );
 }
