@@ -9,7 +9,7 @@ import remotingWork from "./assets/remoting-work.png"
 import sourceGadget from "./assets/source-gadget.png"
 import gift from "./assets/gift.png"
 const Logo = ({ name }) => (
-<img src={name} className='mr-8 h-16' />
+<img src={name} className=' mr-4 md:mr-8 md:h-16 h-8' />
 );
 
 const TiltedLogoBar = () => {

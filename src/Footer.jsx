@@ -25,8 +25,8 @@ const ContactItem = ({ icon, text }) => (
 export default function Footer() {
   return (
     <footer className="footer text-white pb-[20px]  pt-[260px] px-4 mt-[200px] relative overflow-hidden"  >
-  <img src={heroBg} className='absolute  left-[-15%] top-[-70%]'  />
-  <img src={heroBg} className='absolute  right-[-15%] bottom-[-80%]'  />
+  <img src={heroBg} className=' absolute top-0  left-[10%] md:left-[-15%] md:top-[-70%]'  />
+  <img src={heroBg} className='absolute bottom-0 right-[15%] md:right-[-15%] md:bottom-[-80%]'  />
       <div className="max-w-6xl mx-auto pt-[200px] ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FooterSection

@@ -1,16 +1,23 @@
-import React from "react";
+import React, {useEffect} from "react";
 import heroImage from "./assets/jg-hero.png"; // Ensure path is correct
 import heroBg from "./assets/hero-bg.png";
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const Hero = () => {
+    useEffect(() => {
+        AOS.init({ duration: 3000 })
+    }, [])
+
   return (
     <section
-      className=" bg-center bg-no-repeat bg-cover h-[100vh]"
+    id="home"
+      className=" bg-center bg-no-repeat bg-cover h-[80vh] pt-[150px] xl:p-[100px]"
       style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "70%" }}
     >
       <div className="flex flex-col md:flex-row items-center justify-center 2xl:gap-[400px] px-[50px]">
         {/* Left Section with Text */}
-        <div className="text-white space-y-4 max-w-lg">
+        <div className="text-white space-y-4 max-w-lg" data-aos="fade-right"    data-aos-offset="500"
+     >
           {/* Welcome Text with Yellow Highlight */}
           <div
             style={{ borderRadius: "100px / 50px" }}
@@ -20,7 +27,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl font-bold leading-tight">
+          <h1 className="text-[40px] md:text-6xl font-bold leading-tight">
             Awww, Common! You found me too?!
           </h1>
 
@@ -37,7 +44,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section with Image */}
-        <div>
+        <div data-aos="fade-left">
           <img src={heroImage} alt="branding materials" className="" />
         </div>
       </div>
