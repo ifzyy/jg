@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.wave-container {
+  position: relative;
+  background-color: #000; /* Black background like in your image */
+  width: 100vw;
+}
+
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+.skewer {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  z-index: 20;
+  transform: skewY(-2deg);
+}
+
+.swiper-pagination-bullet{
+    background-color: gold !important;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
+.newsletter{
+    background-color: #101010f9 !important;
+}
+.footer{
+    background-color: #101010f9 !important;
+    padding-top: 50px;
+}
+.courtroom{
+    background-color: rgba(255, 255, 255, 0.068);
+    backdrop-filter: blur(10px);
+}
+.news-image{
+    background-color: rgba(246, 195, 10, 0.168);
+    backdrop-filter: blur(10px);
+}
