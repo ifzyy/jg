@@ -9,9 +9,8 @@ export default function MainSection() {
 
   return (
     <div>
-      <section id="about" className=" md:mb-[200px]  mt-[250px] text-white  flex items-center justify-center p-[50px] ">
+      <section id="about" className=" md:mb-[200px]  2xl:mt-[250px] text-white  flex items-center justify-center p-[50px] ">
         <div className="max-w-7xl w-full">
-          <h2  className="text-4xl font-bold text-yellow-400 mb-8">About Me</h2>
           <div className="flex flex-col md:flex-row gap-8"> 
             <div className="md:w-1/2">
               <div className="relative">
@@ -24,6 +23,7 @@ export default function MainSection() {
               </div>
             </div>
             <div className="md:w-1/2"  >
+            <h2  className="text-4xl font-bold text-yellow-400 mb-8">About Me</h2>
               <h3 className="text-3xl font-bold mb-4">I AM JOSEPH GBADAMOSI</h3>
               <p className="text-lg mb-4">The one you heard about.</p>
               <p className="mb-4">

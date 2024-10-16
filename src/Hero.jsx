@@ -1,27 +1,35 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import heroImage from "./assets/jg-hero.png"; // Ensure path is correct
 import heroBg from "./assets/hero-bg.png";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import milkyWay from "./assets/milky-way.png";
+import heroArrow from "./assets/hero-arrow.png"
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Hero = () => {
-    useEffect(() => {
-        AOS.init({ duration: 3000 })
-    }, [])
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+  useEffect(() => {
+    document.title = "joseph gbadamosi";
+  }, []);
 
   return (
     <section
-    id="home"
-      className=" bg-center bg-no-repeat bg-cover h-[80vh] pt-[150px] xl:p-[100px]"
+      id="home"
+      className=" bg-center bg-no-repeat bg-cover  pt-[150px] xl:p-[100px]"
       style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "70%" }}
     >
       <div className="flex flex-col md:flex-row items-center justify-center 2xl:gap-[400px] px-[50px]">
         {/* Left Section with Text */}
-        <div className="text-white space-y-4 max-w-lg" data-aos="fade-right"    data-aos-offset="500"
-     >
+        <div
+          className="text-white space-y-4 max-w-lg relative z-10"
+          data-aos="fade-right"
+
+        >
           {/* Welcome Text with Yellow Highlight */}
           <div
             style={{ borderRadius: "100px / 50px" }}
-            className="inline-block px-5 py-2 bg-black text-white font-bold border border-2 border-[#b69942] "
+            className="inline-block px-5 py-2 bg-black text-white font-bold border border-2 border-[#D19F05] "
           >
             Welcome
           </div>
@@ -39,8 +47,10 @@ const Hero = () => {
 
           {/* Highlighted Name */}
           <h2 className="text-4xl font-bold mt-6">
-            I am the <span className="text-[#b69942] ">JOSEPH GBADAMOSI</span>
+            I am the <span className="text-[#D19F05] ">JOSEPH GBADAMOSI</span>
+            <img src={heroArrow}  className="absolute right-0 top-[50%]"/>
           </h2>
+    
         </div>
 
         {/* Right Section with Image */}
@@ -48,8 +58,10 @@ const Hero = () => {
           <img src={heroImage} alt="branding materials" className="" />
         </div>
       </div>
-
-    
+      <img
+        src={milkyWay}
+        className="w-[100vw] mt-[200px] flex justify-center items-center mx-auto"
+      />
     </section>
   );
 };

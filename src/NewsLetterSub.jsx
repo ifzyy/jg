@@ -11,7 +11,7 @@ const NewsletterSubscription = () => {
   };
 
   return (
-    <div className=" p-[100px] h-[50vh] flex items-center justify-center relative overflow-hidden newsletter">
+    <div className=" p-[100px] h-[50vh] flex items-center justify-center relative overflow-hidden newsletter" id='work'>
       {/* Decorative dots */}
       <div className="absolute w-8 h-8 bg-yellow-400 rounded-full top-20 left-20"></div>
       <div className="absolute w-4 h-4 bg-purple-400 rounded-full top-16 right-40"></div>

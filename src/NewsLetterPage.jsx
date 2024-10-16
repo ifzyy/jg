@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Navbar from "./Nav";
 import copyWriting from "./assets/copywriting.png";
 import heroBg from "./assets/hero-bg.png";
@@ -11,7 +11,8 @@ import newsName from "./assets/news-name.png"
 import testOne from "./assets/test-one.png"
 import testTwo from "./assets/test-two.png"
 import testThree from "./assets/test-three.png"
-
+import AOS from "aos"
+import "aos/dist/aos.css";
 const ImageWithCaption = ({ src, caption }) => (
   <div className="mb-8">
     <img
@@ -23,14 +24,17 @@ const ImageWithCaption = ({ src, caption }) => (
   </div>
 );
 const NewsLetterPage = () => {
+    useEffect(() => {
+        AOS.init({ duration: 3000 });
+      }, []);
   return (
     <>
       <div
         style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "70%" }}
-        className="bg-black text-white min-h-screen bg-center bg-no-repeat  flex items-center justify-center p-4"
+        className="bg-black text-white min-h-screen bg-center bg-no-repeat  flex items-center justify-center pt-16"
       >
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center p-[20px]">
+          <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0" data-aos="fade-right">
             <p className="text-xl mb-4">
               After helping over 700 copywriters,{" "}
               <span className="text-yellow-500 font-bold">
@@ -52,7 +56,7 @@ const NewsLetterPage = () => {
               <li>And become a beast at Copywriting/Marketing</li>
             </ul>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2" data-aos="fade-left">
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <img
                 src={copyWriting}
@@ -65,7 +69,7 @@ const NewsLetterPage = () => {
       </div>
 
       <div
-        className=" p-[100px] flex justify-center items-center bg-bottom bg-cover bg-no-repeat"
+        className=" p-[20px] md:p-[100px] flex justify-center items-center bg-bottom bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "50%" }}
       >
         <div className="text-white p-8 courtroom rounded-lg shadow-md">
@@ -118,7 +122,7 @@ const NewsLetterPage = () => {
       </div>
 
       <div
-        className="bg-black  bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center p-8 p-[100px]"
+        className="bg-black  bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center p-[20px] md:p-[100px]"
         style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "100%" }}
       >
         <div className="courtroom text-white p-6 rounded-lg  shadow-md">
@@ -218,21 +222,21 @@ const NewsLetterPage = () => {
       </div>
 
       <div className="bg-black text-white p-8 mt-[250px]">
-        <div className="flex justify-center bg-top bg-no-repeat flex-col gap-[20px] items-center mx-auto space-y-8" 
+        <div className="md:flex justify-center bg-top bg-no-repeat flex-col gap-[20px] items-center mx-auto space-y-8" 
            style={{
               backgroundImage: `url(${heroBg})`,
               backgroundSize: "50%",
             }}>
           {/* First Section - Two Items with Image and Text Side by Side */}
-          <div className="gap-8 items-start">
+          <div className="">
             {/* First Column */}
-            <div className="flex space-x-4 gap-[50px]">
+            <div className="flex md:flex-row flex-col items-center space-x-4 gap-[50px]">
               <div
-                className="w-1/3 courtroom p-[20px] bg-center bg-contain rounded-lg"
+                className="md:w-1/3 courtroom  p-[10px] md:p-[20px] bg-center bg-contain rounded-lg"
               >
                 <img
                   src={dolapoImage}
-                  className="w-full h-auto rounded-lg shadow-lg mb-2"
+                  className="  h-auto rounded-lg  mb-2"
                 />
               </div>
               <div className="space-y-4 max-w-2xl">
@@ -255,8 +259,8 @@ const NewsLetterPage = () => {
             </div>
 
             {/* Second Column */}
-            <div className="flex space-x-4 gap-[50px]  mt-[20px]">
-              <div className="w-1/3 courtroom p-[20px] rounded-lg">
+            <div className="md:flex space-x-4 gap-[50px]  mt-[20px]">
+              <div className="md:w-1/3 courtroom p-[20px] rounded-lg">
                 <img
                   src={alphaKing}
                   className="w-full h-auto rounded-lg shadow-lg mb-2"
@@ -276,7 +280,7 @@ const NewsLetterPage = () => {
           </div>
 
           {/* Last Section - Two Images Beside Each Other */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="md:grid grid-cols-2 gap-4">
             <ImageWithCaption src={onitadeImage} caption="Dolapo Onifade" />
             <ImageWithCaption
               src={peopleSitting}
@@ -339,9 +343,9 @@ const NewsLetterPage = () => {
       <p className="text-center my-[30px] font-bold  text-[25px] text-yellow-500"> People are saying alot about private emails</p>
       <div>
         <img src={testOne} className="h-auto"/>
-        <div className="flex gap-[50px] items-center mt-8">
+        <div className="flex xl:flex-row flex-col  gap-[50px] items-center mt-8">
         <img src={testTwo} className="h-auto"/>
-        <img src={testThree} className="h-auto"/>
+        <img src={testThree} className="h-auto "/>
         </div>
       </div>
     </div>

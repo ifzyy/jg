@@ -53,10 +53,10 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <div id="services" className=" bg-center bg-no-repeat bg-contain mb-[250px] mt-[100px] p-[20px] md:mt-[400px]"
+    <div id="services" className=" bg-center bg-no-repeat bg-contain mb-[250px] mt-[100px] p-[20px] 2xl:mt-[400px]"
      >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">Our <span className="text-[#b69942] ">Services</span></h2>
+        <h2 className="text-4xl font-bold text-white mb-12 text-center">My <span className="text-[#D19F05] ">Services</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"  style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "200%",backgroundPosition: "50% 20%" }}>
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />

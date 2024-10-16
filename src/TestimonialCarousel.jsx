@@ -40,9 +40,9 @@ const testimonials = [
 
 // Testimonial Card Component
 const TestimonialCard = ({ testimonial }) => (
-  <div  className="bg-white p-6 rounded-lg shadow-lg relative mx-4 my-8 w-[300px]">
+  <div  className="bg-white p-6 rounded-lg shadow-lg relative mx-4 my-8 h-[300px]">
       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md"></div>
-    <h3 className="text-[#b69942]  font-bold">{testimonial.name}</h3>
+    <h3 className="text-[#D19F05]  font-bold">{testimonial.name}</h3>
     <p className="text-gray-600 text-sm mb-4">{testimonial.title}</p>
     <p className="text-gray-800 italic">"{testimonial.quote}"</p>
   </div>
@@ -51,9 +51,9 @@ const TestimonialCard = ({ testimonial }) => (
 const TestimonialCarousel = () => {
     const windowWidth = useRef(window.innerWidth);   
   return (
-    <div id='testimonial' className=" flex items-center justify-center p-8 mt-[250px]">
+    <div id='testimonial' className=" flex items-center justify-center  mt-[250px]">
       <div className="max-w-4xl w-full">
-        <h2 className="text-4xl font-bold text-[#b69942]  text-center mb-4">Testimonials</h2>
+        <h2 className="text-4xl font-bold text-[#D19F05]  text-center mb-4">Testimonials</h2>
         <p className="text-white text-center mb-8">What people are saying about Joseph</p>
 
         {/* Swiper Component */}

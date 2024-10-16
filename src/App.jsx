@@ -7,11 +7,15 @@ import MainSection from "./MainSection";
 import Newsletter from "./NewsLetterPage"; // Import the Newsletter component
 import NewsletterSubscription from "./NewsLetterSub";
 import ContactForm from "./Contact";
+import ScrollToTop from "./scrollToTop"; // Import ScrollToTop
 
 const App = () => {
   return (
     <Router>
       <div className="bg-black">
+        {/* ScrollToTop component to handle scrolling */}
+        <ScrollToTop />
+
         {/* Navbar is shared across all pages */}
         <Navbar />
         

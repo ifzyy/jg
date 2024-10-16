@@ -5,19 +5,26 @@ import imageFour from "./assets/4.png"
 import copyWriting from "./assets/copywriting.png"
 import heroBg from "./assets/hero-bg.png";
 import imageFive from "./assets/5.png"
-
+import rightArrow from "./assets/right-arrow.png"
 const ResourceCard = ({ title, description, imageSrc }) => (
-  <div className="bg-transparent   overflow-hidden">
-    <img src={imageSrc} alt={title} className="w-full h-48 p-[15px] courtroom object-cover" />
-    <div className="p-4">
-      <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-400 text-sm mb-4">{description}</p>
-      <button className="flex items-center text-[#b69942]  hover:text-yellow-400">
-        Learn More <ChevronRight size={20} />
-      </button>
+    <div className="bg-transparent overflow-hidden">
+      <img src={imageSrc} alt={title} className="w-full h-48 p-[15px] courtroom object-cover" />
+      <div className="p-4">
+        <h3 className="text-white text-lg flex items-center font-semibold mb-2">
+          {title}
+          <a href="">
+            <img 
+              src={rightArrow} 
+              className="hover:scale-110 transition-transform duration-300" 
+              alt="arrow" 
+            />
+          </a>
+        </h3>
+        <p className="text-gray-400 text-sm mb-4">{description}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+  
 
 const ResourcesGrid = () => {
   const resources = [
@@ -72,7 +79,7 @@ const ResourcesGrid = () => {
     <div id='resources'  className=" bg-center bg-no-repeat bg-contain mb-[150px] mt-[250px] p-[20px]"
       >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">Our <span className="text-[#b69942] ">Resources</span></h2>
+        <h2 className="text-4xl font-bold text-white mb-12 text-center">Our <span className="text-[#D19F05] ">Resources</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "200%",backgroundPosition: "50% 10%"  }}>
           {resources.map((resource, index) => (
             <ResourceCard key={index} {...resource} />
