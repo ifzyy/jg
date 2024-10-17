@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Send, User, Mail, Phone, Briefcase } from 'lucide-react';
-import watch from "./assets/watch.png";
+import { Send, User, Mail, Briefcase } from 'lucide-react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'; // Include default styles
+import watch from './assets/watch.png';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,10 +17,13 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phoneNumber: value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Add your form submission logic here
   };
 
   return (
@@ -34,17 +39,12 @@ export default function ContactForm() {
           <Mail className="mr-2 text-[#D19F05]" />
           <span>gbadamosijoseph5@gmail.com</span>
         </div>
-        <div className="flex items-center mb-4">
-          <Phone className="mr-2 text-[#D19F05]" />
-          <span>09031416243</span>
-        </div>
         <img src={watch} alt="Smart watch" className="mt-8 hidden lg:block" />
       </div>
 
       {/* Right Section - Contact Form */}
       <div className="lg:w-1/2 w-full">
         <form onSubmit={handleSubmit} className="space-y-4">
-          
           <div className="flex items-center border-[0.5px] border-[#D19F05] rounded p-[20px]">
             <User className="text-[#D19F05] mr-3" />
             <input
@@ -54,7 +54,7 @@ export default function ContactForm() {
               value={formData.fullName}
               onChange={handleChange}
               className="w-full bg-black outline-none border-none text-white placeholder-gray-400"
-              placeholder="Ganiyat Femi"
+              placeholder="Richard Boyd"
             />
           </div>
 
@@ -67,20 +67,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               className="w-full bg-black outline-none border-none text-white placeholder-gray-400"
-              placeholder="gyalfemity@gmail.com"
-            />
-          </div>
-
-          <div className="flex items-center border-[0.5px] border-[#D19F05] rounded p-[20px]">
-            <Phone className="text-[#D19F05] mr-3" />
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              className="w-full bg-black outline-none border-none text-white placeholder-gray-400"
-              placeholder="+2345656656"
+              placeholder="richardboyd@gmail.com"
             />
           </div>
 
@@ -94,6 +81,26 @@ export default function ContactForm() {
               onChange={handleChange}
               className="w-full bg-black outline-none border-none text-white placeholder-gray-400"
               placeholder="Developer, Designer, Manager, etc."
+            />
+          </div>
+
+          {/* Phone Input */}
+          <div className="flex items-center border-[0.5px] border-[#D19F05] rounded p-[20px]">
+            <PhoneInput
+              country={'us'}
+              value={formData.phoneNumber}
+              onChange={handlePhoneChange}
+              inputStyle={{
+                backgroundColor: 'black !important',
+                color: 'white',
+                border: 'none',
+                width: '100%',
+                outline: 'none'
+              }}
+              buttonStyle={{
+                backgroundColor: 'black',
+                border: 'none'
+              }}
             />
           </div>
 

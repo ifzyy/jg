@@ -19,21 +19,21 @@ const FooterSection = ({ title, items, links }) => (
   </div>
 );
 
-const ContactItem = ({ icon, text }) => (
-  <div className="flex items-center mb-2">
+const ContactItem = ({ icon, text, link }) => (
+  <a href={link} className="flex items-center mb-2 hover:text-yellow-500">
     {icon}
     <span className="ml-2 text-gray-300">{text}</span>
-  </div>
+  </a>
 );
 
 export default function Footer() {
   return (
     <footer className="footer text-white pb-[20px] pt-[260px] px-4 mt-[200px] relative z-10 overflow-hidden">
-      {/* Set z-index for the background images to be lower */}
+      {/* Background images */}
       <img src={heroBg} className="absolute top-0 left-[10%] md:left-[-15%] md:top-[-70%] z-0" alt='hue bg'/>
       <img src={heroBg} className="absolute bottom-0 right-[15%] md:right-[-15%] md:bottom-[-80%] z-0" alt='hue bg'/>
 
-      {/* Footer content with higher z-index */}
+      {/* Footer content */}
       <div className="max-w-6xl mx-auto pt-[200px] relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FooterSection
@@ -51,10 +51,12 @@ export default function Footer() {
             <ContactItem 
               icon={<Mail size={18} className="text-[#b69942]" />}
               text="gbadamosijoseph5@gmail.com"
+              link="mailto:gbadamosijoseph5@gmail.com" // mailto link
             />
             <ContactItem 
               icon={<MessageCircle size={18} className="text-[#b69942]" />}
-              text="Chat on whatsapp"
+              text="Chat on WhatsApp"
+              link="https://shorturl.at/28les" // Dynamic WhatsApp link (replace with your number)
             />
           </div>
         </div>
@@ -65,14 +67,14 @@ export default function Footer() {
           <img src={logo} alt="JOSEPH ABADAMOSI" className="h-10" />
         </div>
         <div className="flex space-x-4">
-          <a href="#" className="text-gray-400 hover:text-white cursor-pointer">
-            <img src={linkedIn} className='h-8' alt="LinkedIn" />
+          <a href="https://www.linkedin.com/in/joseph-gbadamosi-616657199/" className="text-gray-400 hover:text-white cursor-pointer">
+            <img src={linkedIn} className='h-20' alt="LinkedIn" />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
-            <img src={x} className='h-8' alt="Twitter/X" />
+          <a href="https://x.com/GbadamosiJosep7" className="text-gray-400 hover:text-white">
+            <img src={x} className='h-20' alt="Twitter/X" />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white cursor-pointer">
-            <img src={instagram} className='h-8' alt="Instagram" />
+          <a href="https://www.instagram.com/josephgbadamosi1/" className="text-gray-400 hover:text-white cursor-pointer">
+            <img src={instagram} className='h-20' alt="Instagram" />
           </a>
         </div>
       </div>
