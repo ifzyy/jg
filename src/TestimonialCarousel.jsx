@@ -14,24 +14,25 @@ const testimonials = [
     },
 
     {
-      "name": "Rigobious Okada, VR",
-      "title": "Progibd Digital Agency",
+      "name": "Moyinloluwa Olawale",
+      "title": " HR,Progibd Digital Agency",
       "quote": "Joseph is a master at his craft."
     },
   
     {
-      "name": "CEO",
-      "title": "PageTurners International.",
+      "name": "Olajumoke Oladeji",
+      "title": "CEO,PageTurners International.",
       "quote": "Joseph wrote a sales copy for a new product my company launched, and he used my story to sell it I highly recommend him."
     },
 
     {
-      "name": "Olalekan Adeniy",
+      "name": "Olalekan Adeniyi",
       "title": "CEO, Hostel Ways Properties",
       "quote": "There are few people I learn from when it comes to copywriting. For Joseph to make that list, it says a lot about his expertise."
     },
     {
-      "name": "Dolupo Hansel",
+      "name": "Dolapo Hamzat",
+      "title": "Direct-response Copywriter and Marketer",
       "quote": "Joseph, you have gotten so good at writing a sales copy."
     },
 
@@ -44,7 +45,7 @@ const TestimonialCard = ({ testimonial }) => (
       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-md"></div>
     <h3 className="text-[#D19F05]  font-bold">{testimonial.name}</h3>
     <p className="text-gray-600 text-sm mb-4">{testimonial.title}</p>
-    <p className="text-gray-800 italic">"{testimonial.quote}"</p>
+    <p className="text-gray-800 italic">{testimonial.quote}</p>
   </div>
 );
 
