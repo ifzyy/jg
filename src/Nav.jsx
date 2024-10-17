@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "./assets/logo.png";
 import heroBg from "./assets/hero-bg.png";
-import contactUs from "./assets/contact-us.png"
+import contactUs from "./assets/contact-us.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,9 +24,9 @@ const Navbar = () => {
         backgroundPosition: "50% 15%",
       }}
     >
-      <nav className="flex justify-between items-center p-[20px] mx-auto border-b-2 border-b-[#b69942]">
+      <nav className="flex justify-between items-center p-5 mx-auto border-b-2 border-b-[#b69942]">
         {/* Logo */}
-        <img src={logo} className="h-10" alt="Logo" />
+        <img src={logo} className="h-10" alt="HeallyHub Logo" loading="lazy" />
 
         {/* Hamburger Menu for Mobile */}
         <button
@@ -69,15 +70,13 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <a href='#contact' className="hidden md:block bg-[#b69942] hover:bg-yellow-600 cursor-pointer text-black px-4 py-2 rounded">
-         <img src={contactUs} />
+          <img src={contactUs} alt="Contact Us" loading="lazy" />
         </a>
       </nav>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out fixed inset-y-0 right-0 w-3/4 bg-black text-white shadow-lg z-40 p-8`}
+        className={`md:hidden transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out fixed inset-y-0 right-0 w-3/4 bg-black text-white shadow-lg z-40 p-8`}
       >
         <ul className="flex flex-col space-y-4 text-center">
           <Link to="/" onClick={handleLinkClick} className="text-white hover:text-[#b69942] cursor-pointer">Home</Link>

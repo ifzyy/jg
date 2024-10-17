@@ -2,10 +2,10 @@ import React,{useEffect} from "react";
 import Navbar from "./Nav";
 import copyWriting from "./assets/copywriting.png";
 import heroBg from "./assets/hero-bg.png";
-import courtImage from "./assets/courtroom.png";
+import courtImage from "./assets/courtroom.webp";
 import dolapoImage from "./assets/dolapo-image.png";
 import onitadeImage from "./assets/onitade.png";
-import alphaKing from "./assets/alphaking.png";
+import alphaKing from "./assets/alphaking.webp";
 import peopleSitting from "./assets/people.png";
 import newsName from "./assets/news-name.png"
 import testOne from "./assets/test-one.png"

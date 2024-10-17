@@ -64,3 +64,39 @@ html{
     background-color: rgba(246, 195, 10, 0.168);
     backdrop-filter: blur(10px);
 }
+@keyframes loadingBar {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 70%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+  .animate-loadingBar {
+    animation: loadingBar 1.5s ease-in-out infinite;
+  }
+  
+  /* Gold color */
+  .bg-gold {
+    background-color: #b69942; /* Adjust the gold shade if needed */
+  }
+  /* Add this to your CSS file */
+.loader {
+    border: 6px solid transparent;
+    border-top: 6px solid gold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-top: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

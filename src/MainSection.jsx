@@ -4,32 +4,39 @@ import ServicesGrid from "./ServiceGrid";
 import TiltedLogoBar from "./TitledLogoBar";
 import TestimonialCarousel from "./TestimonialCarousel";
 import ResourcesGrid from "./ResourcesGrid";
+
 export default function MainSection() {
+  useEffect(() => {
+    document.title = "About Joseph Gbadamosi | Direct-Response Marketing Genius";
+  }, []);
+
   return (
     <div>
+      {/* About Section */}
       <section
         id="about"
-        className=" md:mb-[200px]  2xl:mt-[250px] text-white  flex items-center justify-center p-[50px] "
+        className="md:mb-[200px] 2xl:mt-[250px] text-white flex items-center justify-center p-[50px]"
       >
         <div className="max-w-7xl w-full">
           <div className="flex flex-col md:flex-row gap-8">
+            {/* Image Section */}
             <div className="md:w-1/2">
-              <div className="">
-                <div className="relative max-w-2xl w-full">
-                  {/* White border effect */}
-                  <div className="absolute inset-0 bg-white rounded-3xl transform translate-x-2 translate-y-2"></div>
-
-                  {/* Image container */}
-                  <div className="relative rounded-3xl overflow-hidden">
-                    <img
-                      src={aboutImage}
-                      alt="Workspace with laptop, hands typing, plant, and notepad"
-                      className="w-full h-auto"
-                    />
-                  </div>
+              <div className="relative max-w-lg mx-auto p-6">
+                <div className="relative">
+                  {/* Main Image with Lazy Loading */}
+                  <img
+                    src={aboutImage}
+                    alt="Working with Plan"
+                    className="rounded-lg shadow-lg w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                  {/* Background Layer - Positioned Box */}
+                  <div className="absolute inset-0 top-4 left-4 w-full h-full border border-white opacity-20 bg-black -z-10 transform translate-x-3 translate-y-3"></div>
                 </div>
               </div>
             </div>
+
+            {/* Text Section */}
             <div className="md:w-1/2">
               <h2 className="text-4xl font-bold text-yellow-400 mb-8">
                 About Me
@@ -49,6 +56,8 @@ export default function MainSection() {
           </div>
         </div>
       </section>
+
+      {/* Other Sections */}
       <ServicesGrid />
       <TiltedLogoBar />
       <TestimonialCarousel />

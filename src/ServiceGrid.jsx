@@ -1,17 +1,17 @@
 import React from 'react';
-import copyWriting from "./assets/copywriting.png"
-import mastermind from "./assets/mastermind.png"
-import messageing from "./assets/messaging.png"
-import consulting from "./assets/consulting.png"
-import branding from "./assets/branding.png"
-import marketing from "./assets/marketing.png"
+import copyWriting from "./assets/copywriting.png";
+import mastermind from "./assets/mastermind.png";
+import messaging from "./assets/messaging.png";
+import consulting from "./assets/consulting.png";
+import branding from "./assets/branding.png";
+import marketing from "./assets/marketing.png";
 import heroBg from "./assets/hero-bg.png";
 
-
 const ServiceCard = ({ title, description, imageSrc }) => (
-  <div className="bg-transparent  border-[#2d2c30] border rounded-lg overflow-hidden p-[10px]">
-    <img src={imageSrc} alt={title} className="w-full h-48 object-cover" />
-    <div className="p-4 border  border-[#2d2c30] m-2 rounded-[10px]">
+  <div className="bg-transparent border-[#2d2c30] border rounded-lg overflow-hidden p-[10px]">
+    {/* Lazy loading for image optimization */}
+    <img src={imageSrc} alt={title} className="w-full h-48 object-cover" loading="lazy" />
+    <div className="p-4 border border-[#2d2c30] m-2 rounded-[10px]">
       <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
       <p className="text-gray-400 text-sm">{description}</p>
     </div>
@@ -28,7 +28,7 @@ const ServicesGrid = () => {
     {
       title: "Marketing",
       description: "Boost your brand and grow your business with smart marketing that works. Strategies that'll grow your online presence and attract customers.",
-      imageSrc:marketing
+      imageSrc: marketing
     },
     {
       title: "Branding",
@@ -43,21 +43,26 @@ const ServicesGrid = () => {
     {
       title: "Brand Messaging",
       description: "Craft compelling brand messaging that resonates with your audience. Develop a unique voice and language that sparks growth and differentiation.",
-      imageSrc:messageing
+      imageSrc: messaging
     },
     {
-      title: "The copywriting mastermind",
+      title: "The Copywriting Mastermind",
       description: "Unlock persuasive writing secrets to drive business success. Master customer psychology and craft irresistible offers.",
-      imageSrc:mastermind
+      imageSrc: mastermind
     }
   ];
 
   return (
-    <div id="services" className=" bg-center bg-no-repeat bg-contain mb-[250px] mt-[100px] p-[20px] 2xl:mt-[400px]"
-     >
+    <div
+      id="services"
+      className="bg-center bg-no-repeat bg-contain mb-[250px] mt-[100px] p-[20px] 2xl:mt-[400px]"
+      style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "200%", backgroundPosition: "50% 20%" }}
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">My <span className="text-[#D19F05] ">Services</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"  style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "200%",backgroundPosition: "50% 20%" }}>
+        <h2 className="text-4xl font-bold text-white mb-12 text-center">
+          My <span className="text-[#D19F05]">Services</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}

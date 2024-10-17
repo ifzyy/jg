@@ -32,7 +32,7 @@ export default function ContactForm() {
         <p className="mb-4">You can send an email or fill the form below:</p>
         <div className="flex items-center mb-4">
           <Mail className="mr-2 text-[#D19F05]" />
-          <span>abadamosijoseph5@gmail.com</span>
+          <span>gbadamosijoseph5@gmail.com</span>
         </div>
         <div className="flex items-center mb-4">
           <Phone className="mr-2 text-[#D19F05]" />

@@ -30,8 +30,8 @@ export default function Footer() {
   return (
     <footer className="footer text-white pb-[20px] pt-[260px] px-4 mt-[200px] relative z-10 overflow-hidden">
       {/* Set z-index for the background images to be lower */}
-      <img src={heroBg} className="absolute top-0 left-[10%] md:left-[-15%] md:top-[-70%] z-0" />
-      <img src={heroBg} className="absolute bottom-0 right-[15%] md:right-[-15%] md:bottom-[-80%] z-0" />
+      <img src={heroBg} className="absolute top-0 left-[10%] md:left-[-15%] md:top-[-70%] z-0" alt='hue bg'/>
+      <img src={heroBg} className="absolute bottom-0 right-[15%] md:right-[-15%] md:bottom-[-80%] z-0" alt='hue bg'/>
 
       {/* Footer content with higher z-index */}
       <div className="max-w-6xl mx-auto pt-[200px] relative z-10">
@@ -50,7 +50,7 @@ export default function Footer() {
             <h2 className="text-[#b69942] font-semibold mb-3">Contact</h2>
             <ContactItem 
               icon={<Mail size={18} className="text-[#b69942]" />}
-              text="abadamosijoseph5@gmail.com"
+              text="gbadamosijoseph5@gmail.com"
             />
             <ContactItem 
               icon={<MessageCircle size={18} className="text-[#b69942]" />}
