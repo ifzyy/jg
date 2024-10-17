@@ -1,37 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.wave-container {
-  position: relative;
-  background-color: #000; /* Black background like in your image */
-  width: 100vw;
-}
-
-.star {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
-    0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
-  animation: twinkle 2s infinite ease-in-out;
-}
-
-@keyframes twinkle {
-  0% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-}
 
 .skewer {
   width: 100%;
@@ -46,6 +15,7 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 
 }
 
@@ -84,19 +54,3 @@ html{
   .bg-gold {
     background-color: #b69942; /* Adjust the gold shade if needed */
   }
-  /* Add this to your CSS file */
-.loader {
-    border: 6px solid transparent;
-    border-top: 6px solid gold;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin-top: 20px;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
