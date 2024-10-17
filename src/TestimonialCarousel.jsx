@@ -15,7 +15,7 @@ const testimonials = [
 
     {
       "name": "Moyinloluwa Olawale",
-      "title": " HR,Progibd Digital Agency",
+      "title": " HR,Progital Digital Agency",
       "quote": "Joseph is a master at his craft."
     },
   
