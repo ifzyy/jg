@@ -72,3 +72,10 @@ html{
     border: 1px solid #b69942 !important;
     background-color: black !important;
 }
+.form-control{
+  color: white !important;
+  background-color: black !important;
+  width: 100% !important;
+  outline: none !important;
+  border: none !important;
+}
