@@ -13,8 +13,8 @@ import testTwo from "./assets/test-two.png";
 import testThree from "./assets/test-three.png";
 import testFour from "./assets/test-4.png";
 import testFive from "./assets/test-5.png";
-import testSix from "./assets/test-six.png"
-import testSeven from "./assets/test-seven.png"
+import testSix from "./assets/test-six.png";
+import testSeven from "./assets/test-seven.png";
 import TestimonialCarousel from "./TestimonialCarousel";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,6 +27,12 @@ const ImageWithCaption = ({ src, caption }) => (
     />
     <p className="text-gray-300 text-sm text-center">{caption}</p>
   </div>
+);
+
+const EmphasisText = ({ children }) => (
+  <a href="#" className="text-yellow-500 text-xl underline font-bold mb-6">
+    {children}
+  </a>
 );
 
 const Section = ({ children, className }) => (
@@ -489,45 +495,80 @@ const NewsLetterPage = () => {
         </div>
       </div>
 
-      <div className="bg-black text-white  flex items-center justify-center p-4">
-      <div className="max-w-2xl text-center">
-        <p className="text-yellow-500 text-xl font-bold mb-6">
-          But I can't promise the price will stay at ₦3,500 forever
-        </p>
-        
-        <p className="mb-6">
-          The emails I send are sometimes very risky. In order to keep toxic people away, I'll have to increase the price soon
-        </p>
-        
-        <p className="mb-6">
-          And look, I get it. You're probably meeting Joseph Gbadamosi for the first time, and you're wondering who the heck is this guy?
-        </p>
-        
-        <p className="mb-6">
-          If you don't believe in yourself enough to give yourself one more shot, then kindly exit this page
-        </p>
-        
-        <p className="mb-6">
-          Go back to the many fake coaches out there, get burned a lot of times, waste a lot of money and just maybe - one day - you'll be lucky enough to meet me again.
-        </p>
-        
-        <p className="text-2xl font-bold mb-6">Or</p>
-        
-        <p className="mb-6">
-          You can bet on yourself now with just ₦3500 for a lifetime access. You can learn all the secrets of the Copywriting Industry. You can grow faster in few months.
-        </p>
-        
-        <p className="mb-8">
-          And finally, as you sit in your new car sipping your favourite drink with complete rest of mind, you'll remember this moment that made all the difference.
-        </p>
-        
-        <p className="text-2xl font-bold">
-          See you inside.
-        </p>
-      </div>
-    </div>
+      <div className="bg-black text-white  flex items-center justify-center mt-[70px] mb-[80px] p-4">
+        <div className="max-w-2xl text-center">
+          <EmphasisText>
+            I WANT TO RECEIVE DAILY PRIVATE EMAILS FROM YOU
+          </EmphasisText>
 
-    <TestimonialCarousel />
+          <p className="mb-6">
+            Look, you need to be careful. There's a very good chance you don't
+            know a lot about how Copywriting really works. So when you read my
+            emails and they jolt you to reality, don't panic
+          </p>
+
+          <p className="text-xl font-bold mb-6">*You must not panic*</p>
+
+          <p className="mb-6">
+            Instead, use what you'll be learning in the next few minutes to
+            guard yourself and become that dangerous Copywriter everyone thought
+            you could not be
+          </p>
+
+          <p className="text-lg font-semibold mb-8">Prove them wrong</p>
+
+          <EmphasisText>
+            I'M READY TO LEARN THE REAL TRUTHS ABOUT COPYWRITING
+          </EmphasisText>
+        </div>
+      </div>
+
+      <div className="bg-black text-white  flex items-center justify-center p-4 ">
+        <div className="max-w-2xl text-center courtroom p-8">
+          <p className="text-yellow-500 text-xl font-bold mb-6">
+            But I can't promise the price will stay at ₦3,500 forever
+          </p>
+
+          <p className="mb-6">
+            The emails I send are sometimes very risky. In order to keep toxic
+            people away, I'll have to increase the price soon
+          </p>
+
+          <p className="mb-6">
+            And look, I get it. You're probably meeting Joseph Gbadamosi for the
+            first time, and you're wondering who the heck is this guy?
+          </p>
+
+          <p className="mb-6">
+            If you don't believe in yourself enough to give yourself one more
+            shot, then kindly exit this page
+          </p>
+
+          <p className="mb-6">
+            Go back to the many fake coaches out there, get burned a lot of
+            times, waste a lot of money and just maybe - one day - you'll be
+            lucky enough to meet me again.
+          </p>
+
+          <p className="text-2xl font-bold mb-6">Or</p>
+
+          <p className="mb-6">
+            You can bet on yourself now with just ₦3500 for a lifetime access.
+            You can learn all the secrets of the Copywriting Industry. You can
+            grow faster in few months.
+          </p>
+
+          <p className="mb-8">
+            And finally, as you sit in your new car sipping your favourite drink
+            with complete rest of mind, you'll remember this moment that made
+            all the difference.
+          </p>
+
+          <p className="text-2xl font-bold">See you inside.</p>
+        </div>
+      </div>
+
+      <TestimonialCarousel />
     </>
   );
 };
