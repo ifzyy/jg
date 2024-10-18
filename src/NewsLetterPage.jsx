@@ -474,7 +474,7 @@ const NewsLetterPage = () => {
             </p>
           </div>
 
-          <Section className="flex justify-center space-x-4 mt-[50px]">
+          <Section className="flex justify-center space-x-4 mt-[50px]  xl:flex-row flex-col  gap-[50px] items-center mt-8">
             <img
               src={testSix}
               alt="30 Ways You Can Earn As A Copywriter"
