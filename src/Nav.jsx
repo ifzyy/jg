@@ -86,7 +86,7 @@ const Navbar = () => {
           <Link to="/newsletter" onClick={handleLinkClick} className="text-white hover:text-[#b69942] cursor-pointer">Newsletter</Link>
         </ul>
         <div className="mt-4 flex justify-center">
-          <a href='#contact' className="bg-[#b69942] hover:bg-yellow-600 cursor-pointer text-black px-4 py-2 rounded">
+          <a href='#contact' className="bg-[#b69942] hover:bg-yellow-600 cursor-pointer text-black px-4 py-2 rounded" onClick={handleLinkClick}> 
             <img src={contactUs} alt="Contact Us" loading="lazy" />
           </a>
         </div>
