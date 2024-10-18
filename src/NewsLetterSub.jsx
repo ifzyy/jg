@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NewsletterSubscription = () => {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle subscription logic here
     console.log('Subscribed with email:', email);
+
+    // Reset the form
     setEmail('');
+
+    // Redirect to the newsletter page
+    navigate('/newsletter');
   };
 
   return (

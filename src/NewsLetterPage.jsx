@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Nav";
 import copyWriting from "./assets/copywriting.png";
 import heroBg from "./assets/hero-bg.png";
@@ -7,11 +7,16 @@ import dolapoImage from "./assets/dolapo-image.png";
 import onitadeImage from "./assets/onitade.png";
 import alphaKing from "./assets/alphaking.webp";
 import peopleSitting from "./assets/people.png";
-import newsName from "./assets/news-name.png"
-import testOne from "./assets/test-one.png"
-import testTwo from "./assets/test-two.png"
-import testThree from "./assets/test-three.png"
-import AOS from "aos"
+import newsName from "./assets/news-name.png";
+import testOne from "./assets/test-one.png";
+import testTwo from "./assets/test-two.png";
+import testThree from "./assets/test-three.png";
+import testFour from "./assets/test-4.png";
+import testFive from "./assets/test-5.png";
+import testSix from "./assets/test-six.png"
+import testSeven from "./assets/test-seven.png"
+import TestimonialCarousel from "./TestimonialCarousel";
+import AOS from "aos";
 import "aos/dist/aos.css";
 const ImageWithCaption = ({ src, caption }) => (
   <div className="mb-8">
@@ -23,10 +28,24 @@ const ImageWithCaption = ({ src, caption }) => (
     <p className="text-gray-300 text-sm text-center">{caption}</p>
   </div>
 );
+
+const Section = ({ children, className }) => (
+  <div className={`mb-8 ${className}`}>{children}</div>
+);
+
+const List = ({ items }) => (
+  <ul className="list-disc list-inside mb-4">
+    {items.map((item, index) => (
+      <li key={index} className="mb-2">
+        {item}
+      </li>
+    ))}
+  </ul>
+);
 const NewsLetterPage = () => {
-    useEffect(() => {
-        AOS.init({ duration: 3000 });
-      }, []);
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
   return (
     <>
       <div
@@ -222,22 +241,19 @@ const NewsLetterPage = () => {
       </div>
 
       <div className="bg-black text-white p-8 mt-[250px]">
-        <div className="md:flex justify-center bg-top bg-no-repeat flex-col gap-[20px] items-center mx-auto space-y-8" 
-           style={{
-              backgroundImage: `url(${heroBg})`,
-              backgroundSize: "50%",
-            }}>
+        <div
+          className="md:flex justify-center bg-top bg-no-repeat flex-col gap-[20px] items-center mx-auto space-y-8"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            backgroundSize: "50%",
+          }}
+        >
           {/* First Section - Two Items with Image and Text Side by Side */}
           <div className="">
             {/* First Column */}
             <div className="flex md:flex-row flex-col items-center space-x-4 gap-[50px]">
-              <div
-                className="md:w-1/3 courtroom  p-[10px] md:p-[20px] bg-center bg-contain rounded-lg"
-              >
-                <img
-                  src={dolapoImage}
-                  className="  h-auto rounded-lg  mb-2"
-                />
+              <div className="md:w-1/3 courtroom  p-[10px] md:p-[20px] bg-center bg-contain rounded-lg">
+                <img src={dolapoImage} className="  h-auto rounded-lg  mb-2" />
               </div>
               <div className="space-y-4 max-w-2xl">
                 <p className="text-lg">
@@ -290,65 +306,228 @@ const NewsLetterPage = () => {
         </div>
       </div>
 
-
       <div className="bg-black text-white  flex flex-col items-center justify-center p-4">
-      <div className="max-w-4xl w-full">
-        <h1 className="text-2xl font-bold mb-4 text-center">The list goes on...</h1>
-        <p className="text-xl mb-8 text-center">
-          But at an exclusive hangout of 19 of Nigeria's best Copywriters I found out a{' '}
-          <span className="text-yellow-500 font-bold">SHOCKING TRUTH</span>
-        </p>
-        
-        <div className="courtroom p-6 rounded-lg bg-center bg-no-repeat"     style={{
+        <div className="max-w-4xl w-full">
+          <h1 className="text-2xl font-bold mb-4 text-center">
+            The list goes on...
+          </h1>
+          <p className="text-xl mb-8 text-center">
+            But at an exclusive hangout of 19 of Nigeria's best Copywriters I
+            found out a{" "}
+            <span className="text-yellow-500 font-bold">SHOCKING TRUTH</span>
+          </p>
+
+          <div
+            className="courtroom p-6 rounded-lg bg-center bg-no-repeat"
+            style={{
               backgroundImage: `url(${heroBg})`,
               backgroundSize: "70%",
-            }}>
-          <h2 className="text-xl font-bold mb-4">
-            The <span className="text-yellow-500">NIGERIAN COPYWRITING INDUSTRY</span> has a lot of{' '}
-            <span className="text-yellow-500">SECRETS</span>
-          </h2>
-          
-          <p className="mb-4">
-            While some are good, others are terribly bad. And unless you have access to these secrets, you'll
-            be left behind so badly.
-          </p>
-          
-          <p className="mb-4">
-            Nothing will ever work for you. And all your efforts will hit a brick wall. This is why I'm writing
-            this.
-          </p>
-          
-          <p className="mb-4">
-            Now I have taken my time to compile all these secrets into a file. I wrote it all down to ensure you
-            never fail in your Copywriting journey
-          </p>
-          
-          <p className="mb-4">
-            And I'll be sending these secrets to your email everyday by 10AM. But not only that, I'll also be
-            teaching you actual Copywriting and Marketing
-          </p>
-          
-          <p className="mb-4">
-            Every day, you will wake up to a NEW PRIVATE EMAIL from me. It'll contain a peek into my
-            personal life, secrets of the industry, and teachings on how you can make a lot of money from
-            Copywriting/Marketing.
-          </p>
-          
-          <p className="text-yellow-500 font-bold">
-            It's a PRIVATE NEWSLETTER CALLED
-          </p>
+            }}
+          >
+            <h2 className="text-xl font-bold mb-4">
+              The{" "}
+              <span className="text-yellow-500">
+                NIGERIAN COPYWRITING INDUSTRY
+              </span>{" "}
+              has a lot of <span className="text-yellow-500">SECRETS</span>
+            </h2>
+
+            <p className="mb-4">
+              While some are good, others are terribly bad. And unless you have
+              access to these secrets, you'll be left behind so badly.
+            </p>
+
+            <p className="mb-4">
+              Nothing will ever work for you. And all your efforts will hit a
+              brick wall. This is why I'm writing this.
+            </p>
+
+            <p className="mb-4">
+              Now I have taken my time to compile all these secrets into a file.
+              I wrote it all down to ensure you never fail in your Copywriting
+              journey
+            </p>
+
+            <p className="mb-4">
+              And I'll be sending these secrets to your email everyday by 10AM.
+              But not only that, I'll also be teaching you actual Copywriting
+              and Marketing
+            </p>
+
+            <p className="mb-4">
+              Every day, you will wake up to a NEW PRIVATE EMAIL from me. It'll
+              contain a peek into my personal life, secrets of the industry, and
+              teachings on how you can make a lot of money from
+              Copywriting/Marketing.
+            </p>
+
+            <p className="text-yellow-500 font-bold">
+              It's a PRIVATE NEWSLETTER CALLED
+            </p>
+          </div>
+        </div>
+        <img src={newsName} className="mt-[50px] h-auto" />
+        <p className="text-center my-[30px] font-bold  text-[25px] text-yellow-500">
+          {" "}
+          People are saying alot about private emails
+        </p>
+        <div>
+          <img src={testOne} className="h-auto" />
+          <div className="flex xl:flex-row flex-col  gap-[50px] items-center mt-8">
+            <img src={testTwo} className="h-auto" />
+            <img src={testThree} className="h-auto " />
+          </div>
+          <div className="flex xl:flex-row flex-col  gap-[50px] items-center mt-8">
+            <img src={testFour} className="h-auto" />
+            <img src={testFive} className="h-auto " />
+          </div>
         </div>
       </div>
-      <img src= {newsName} className="mt-[50px] h-auto"  />
-      <p className="text-center my-[30px] font-bold  text-[25px] text-yellow-500"> People are saying alot about private emails</p>
-      <div>
-        <img src={testOne} className="h-auto"/>
-        <div className="flex xl:flex-row flex-col  gap-[50px] items-center mt-8">
-        <img src={testTwo} className="h-auto"/>
-        <img src={testThree} className="h-auto "/>
+
+      <div className="bg-black text-white  p-8">
+        <div className="max-w-3xl mx-auto">
+          <Section className="mt-[150px] mb-[100px]">
+            <h2 className="text-2xl font-bold mb-4">
+              But that's not all, alongside my PRIVATE NEWSLETTER, you'll also
+              get access to all my previous emails like...
+            </h2>
+            <List
+              items={[
+                "The Truth about the Copywriting Industry",
+                "How To Run A Marketing Campaign 1-5 (5 powerful Emails on marketing)",
+                "Who Do They Say I Am?",
+                "Is Dolapo Really Leaving the Copywriting Industry?",
+                "CONFESSIONS",
+              ]}
+            />
+            <Section>
+              <p className="font-bold mb-4">
+                I've said all these for 2 reasons,
+              </p>
+              <List
+                items={[
+                  "You're going to get so much value from my emails you will be angry for not knowing me sooner",
+                  "My email list is not for everyone",
+                  "To scare away the time wasters and keep only a closed circle of serious people that will read my emails and can take in the secrets I'll be sharing and implement them. I have tagged a very small price",
+                ]}
+              />
+            </Section>
+          </Section>
+
+          <div
+            className="courtroom p-6 rounded-lg bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroBg})`,
+              backgroundSize: "70%",
+            }}
+          >
+            <Section>
+              <h2 className="text-2xl font-bold mb-4 text-yellow-500">
+                HOW MUCH DOES IT COST TO RECEIVE MY PRIVATE NEWSLETTERS FOREVER?
+              </h2>
+              <p className="mb-2">No, it'll not cost you a million naira</p>
+              <p className="mb-2">No it'll not cost you N500,000</p>
+              <p className="mb-2">And no, it won't even cost you N50k</p>
+              <p className="mb-2">
+                In fact, you can GET IN TODAY FOR JUST N3,500
+              </p>
+              <p className="mb-4">
+                If you've heard of my exploits before now, you're probably
+                screaming in your head. And I perfectly understand.
+              </p>
+              <p className="mb-4">
+                It makes no sense. Why make something this valuable so cheap?
+              </p>
+            </Section>
+
+            <Section>
+              <p className="mb-4">
+                Well, it's simply because I want to help as many Copywriters as
+                I can. I wasted 6 months of my career because I got a FAKE
+                COPYWRITING COURSE
+              </p>
+              <p className="mb-4">
+                I don't want others to make the same mistake I made. But I'm not
+                done yet. You'll also get access to
+              </p>
+              <p className="font-bold mb-4 text-yellow-500">
+                THE OFFER CREATION SERIES
+              </p>
+              <p className="mb-4">
+                Now, the one thing that will make you a lot of money from
+                Copywriting is your ability to create WINNING OFFERS. And I've
+                explained all you need to know in a series of emails.
+              </p>
+              <p className="mb-4">
+                But that's not all, you'll also get the guide
+              </p>
+            </Section>
+
+            <h2 className=" font-bold  mb-4">
+              30 Ways You Can Earn As A Copywriter (FREE)
+            </h2>
+            <p className="mb-4">
+              Now, if you're looking to make a lot of money from Copywriting,
+              then this is your best bet. A lot of people are currently using
+              this simple guide to make a lot of money for themselves and their
+              families
+            </p>
+          </div>
+
+          <Section className="flex justify-center space-x-4 mt-[50px]">
+            <img
+              src={testSix}
+              alt="30 Ways You Can Earn As A Copywriter"
+              className="rounded-lg shadow-lg"
+            />
+            <img
+              src={testSeven}
+              alt="30 Ways You Can Earn As A Copywriter"
+              className="rounded-lg shadow-lg"
+            />
+          </Section>
         </div>
+      </div>
+
+      <div className="bg-black text-white  flex items-center justify-center p-4">
+      <div className="max-w-2xl text-center">
+        <p className="text-yellow-500 text-xl font-bold mb-6">
+          But I can't promise the price will stay at ₦3,500 forever
+        </p>
+        
+        <p className="mb-6">
+          The emails I send are sometimes very risky. In order to keep toxic people away, I'll have to increase the price soon
+        </p>
+        
+        <p className="mb-6">
+          And look, I get it. You're probably meeting Joseph Gbadamosi for the first time, and you're wondering who the heck is this guy?
+        </p>
+        
+        <p className="mb-6">
+          If you don't believe in yourself enough to give yourself one more shot, then kindly exit this page
+        </p>
+        
+        <p className="mb-6">
+          Go back to the many fake coaches out there, get burned a lot of times, waste a lot of money and just maybe - one day - you'll be lucky enough to meet me again.
+        </p>
+        
+        <p className="text-2xl font-bold mb-6">Or</p>
+        
+        <p className="mb-6">
+          You can bet on yourself now with just ₦3500 for a lifetime access. You can learn all the secrets of the Copywriting Industry. You can grow faster in few months.
+        </p>
+        
+        <p className="mb-8">
+          And finally, as you sit in your new car sipping your favourite drink with complete rest of mind, you'll remember this moment that made all the difference.
+        </p>
+        
+        <p className="text-2xl font-bold">
+          See you inside.
+        </p>
       </div>
     </div>
+
+    <TestimonialCarousel />
     </>
   );
 };
