@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out fixed inset-y-0 right-0 w-3/4 bg-black text-white shadow-lg z-40 p-8`}
+        className={`md:hidden fixed inset-x-0 top-0 transform ${isOpen ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-500 ease-in-out bg-black text-white shadow-lg z-40 p-8`}
       >
         <ul className="flex flex-col space-y-4 text-center">
           <Link to="/" onClick={handleLinkClick} className="text-white hover:text-[#b69942] cursor-pointer">Home</Link>
@@ -86,9 +86,9 @@ const Navbar = () => {
           <Link to="/newsletter" onClick={handleLinkClick} className="text-white hover:text-[#b69942] cursor-pointer">Newsletter</Link>
         </ul>
         <div className="mt-4 flex justify-center">
-          <button className="bg-[#b69942] hover:bg-yellow-600 text-black px-4 py-2 rounded">
-            Contact Us
-          </button>
+          <a href='#contact' className="bg-[#b69942] hover:bg-yellow-600 cursor-pointer text-black px-4 py-2 rounded">
+            <img src={contactUs} alt="Contact Us" loading="lazy" />
+          </a>
         </div>
       </div>
     </header>

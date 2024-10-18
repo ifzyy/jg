@@ -27,7 +27,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row bg-black text-white p-6 lg:p-[100px]">
+    <div className="flex flex-col lg:flex-row bg-black text-white p-6 lg:p-[100px]" id='contact'>
       {/* Left Section */}
       <div className="lg:w-1/2 pr-0 lg:pr-8 mb-8 lg:mb-0">
         <h1 className="text-3xl lg:text-4xl font-bold mb-4">
