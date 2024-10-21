@@ -507,7 +507,7 @@ const NewsLetterPage = () => {
             emails and they jolt you to reality, don't panic
           </p>
 
-          <p className="text-xl font-bold mb-6">*You must not panic*</p>
+          <p className="text-xl font-bold mb-6">You must not panic</p>
 
           <p className="mb-6">
             Instead, use what you'll be learning in the next few minutes to
