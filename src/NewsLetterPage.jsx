@@ -30,7 +30,7 @@ const ImageWithCaption = ({ src, caption }) => (
 );
 
 const EmphasisText = ({ children }) => (
-  <a href="#" className="text-yellow-500 text-xl underline font-bold mb-6">
+  <a href="https://selar.co/817b28" className="text-yellow-500 text-xl underline font-bold mb-6">
     {children}
   </a>
 );
