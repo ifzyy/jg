@@ -28,22 +28,14 @@ const NewsletterSubscription = () => {
 
       <div className="text-center z-10">
         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Want to learn from Joseph</h2>
-        <form onSubmit={handleSubmit} className="flex max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Subscribe to my newsletter"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="flex-grow px-4 py-2 rounded-l-lg focus:outline-none"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-[#b69942] text-black px-6 py-2 rounded-r-lg font-semibold hover:bg-yellow-400 transition duration-300"
+     
+          <a href="/newsletter"
+           
+            className="bg-[#b69942] text-black px-6 py-2 underline font-semibold hover:bg-yellow-400 transition duration-300"
           >
-            Subscribe
-          </button>
-        </form>
+            Subscribe to my newsletter here
+          </a>
+    
       </div>
     </div>
   );

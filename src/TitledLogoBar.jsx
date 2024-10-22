@@ -34,14 +34,16 @@ const TiltedLogoBar = () => {
   return (
     <div className="w-full overflow-hidden bg-black mb-[150px]">
       <div className="bg-gradient-to-r from-[#4d3c06] via-[#dcbd58] to-[#52441d] bg-[length:100%] skewer w-[100vw] overflow-hidden">
-        <div className="flex gap-[50px] justify-around animate-marquee whitespace-nowrap">
-          {logos.concat(logos).map((logo, index) => (
-            <Logo 
-              key={index} 
-              name={logo.name} 
-              altText={logo.altText} // Provide meaningful alt text for each logo
-            />
-          ))}
+        <div className="marquee">
+          <div className="marquee-content">
+            {logos.concat(logos).map((logo, index) => (
+              <Logo 
+                key={index} 
+                name={logo.name} 
+                altText={logo.altText} // Provide meaningful alt text for each logo
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

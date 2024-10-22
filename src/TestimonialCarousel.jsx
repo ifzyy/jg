@@ -38,7 +38,7 @@ const testimonials = [
   {
     name: 'Olalekan Adeniyi',
     title: 'CEO, Hostel Ways Properties',
-    quote: 'There are few people I learn from when it comes to copywriting. For Joseph to make that list, it says a lot about his expertise.',
+    quote: "Theres really no argument here. Joseph is great at what he does.",
     image: olalekan,
   },
   {
@@ -62,7 +62,7 @@ const testimonials = [
   {
     name: 'Damilare Aribisala',
     title: 'Copywriter, DaraTV',
-    quote: 'Joseph is one of my few underrated blessings of copywriting. For Joseph to make that tiny list, it says a lot about his expertise.',
+    quote: 'There are few people I learn from when it comes to copywriting. For Joseph to make that tiny list, it says a lot about his expertise',
     image: damilare,
   },
   {

@@ -92,13 +92,14 @@ const App = () => {
                 <>
                   <Hero />
                   <MainSection />
+                  <NewsletterSubscription />
                 </>
               }
             />
             <Route path="/newsletter" element={<Newsletter />} />
           </Routes>
         )}
-        <NewsletterSubscription />
+    
         <ContactForm />
         <Footer />
       </div>

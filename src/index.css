@@ -79,3 +79,27 @@ html{
   outline: none !important;
   border: none !important;
 }
+/* Marquee container */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Inner container for the logos */
+.marquee-content {
+  display: flex;
+  gap: 50px;  /* Adjust as needed */
+  animation: scroll-marquee 30s linear infinite; /* Smooth infinite scrolling */
+}
+
+/* Keyframes for the marquee animation */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
