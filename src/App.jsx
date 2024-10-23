@@ -82,9 +82,7 @@ const App = () => {
       <div className="bg-black">
         <ScrollToTop />
         <Navbar />
-        {loading ? (
-          <SplashScreen /> // Display splash screen while loading
-        ) : (
+    
           <Routes>
             <Route
               path="/"
@@ -98,7 +96,6 @@ const App = () => {
             />
             <Route path="/newsletter" element={<Newsletter />} />
           </Routes>
-        )}
     
         <ContactForm />
         <Footer />
