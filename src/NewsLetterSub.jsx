@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NewsletterSubscription = () => {
   const [email, setEmail] = useState('');
@@ -29,12 +30,12 @@ const NewsletterSubscription = () => {
       <div className="text-center z-10">
         <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Want to learn from Joseph</h2>
      
-          <a href="/newsletter"
+          <Link to="/newsletter"
            
             className="bg-[#b69942] text-black px-6 py-2 underline font-semibold hover:bg-yellow-400 transition duration-300"
           >
             Subscribe to my newsletter here
-          </a>
+          </Link>
     
       </div>
     </div>
